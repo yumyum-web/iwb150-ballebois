@@ -1,5 +1,14 @@
 #!/usr/bin/env sh
 
+# Get the current branch name
+branch_name=$(git symbolic-ref --short HEAD)
+
+# Block commits to the main branch
+if [ "$branch_name" = "main" ]; then
+  echo "Direct commits to 'main' are not allowed!"
+  exit 1
+fi
+
 # bal does not support formatting individual files that are a part of a package, so we need to format the entire package.
 # Formatting does not fail even if there are errors, so we need to run build to check for errors.
 bal build
