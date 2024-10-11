@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+# bal does not support formatting individual files that are a part of a package, so we need to format the entire package.
+# Formatting does not fail even if there are errors, so we need to run build to check for errors.
+bal build
+bal format
+
+# Run lint-staged, You cannot do partial staging
+pnpm lint-staged --no-hide-partially-staged

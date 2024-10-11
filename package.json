@@ -1,0 +1,27 @@
+{
+  "name": "ballebois",
+  "version": "0.1.0",
+  "description": "A WhatsApp bot that provides weather updates and enables weather-related conversations.",
+  "scripts": {
+    "start": "bal run",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "ballebois",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "prettier-plugin-toml": "^2.0.1"
+  },
+  "lint-staged": {
+    "*.bal": "git add --update",
+    "*.{json,md,toml}": "prettier --write"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-toml"
+    ]
+  }
+}
