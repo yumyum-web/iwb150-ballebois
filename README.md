@@ -33,3 +33,13 @@
    ```bash
    pnpm start
    ```
+
+## Contributing
+
+### Git Workflow
+
+- The `main` branch is the default branch.
+- Commiting directly or merging to the `main` branch locally is not allowed.
+- Create a new branch for each issue.
+- Push the branch to the remote repository and create a pull request when ready for review.
+- Addding `Closes #issue-number` in the pull request description or in any commit message will automatically close the issue when the pull request is merged.

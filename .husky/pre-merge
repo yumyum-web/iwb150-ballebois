@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+# Get the current branch name
+branch_name=$(git symbolic-ref --short HEAD)
+
+# Block merges into the main branch
+if [ "$branch_name" = "main" ]; then
+  echo "Merging into 'main' is not allowed!"
+  exit 1
+fi
+
+exit 0
